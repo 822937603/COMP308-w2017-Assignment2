@@ -1,0 +1,23 @@
+{
+  "name": "comp308-assignment1",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Jonathan Lee"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/822937603/COMP308-w2017-Assignment1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/Scripts/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "2.2.4"
+  }
+}
