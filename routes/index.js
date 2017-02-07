@@ -1,51 +1,43 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 
-//gobal route variables
-/*let currentDate = new Date();
-  currentDate = currentDate.toLocaleTimeString();*/
+// Global Route Variables
+let currentDate = new Date();
+  currentDate = currentDate.toLocaleTimeString();
 
-/* GET home page, wildcard*/
+/* GET home page. wildcard */
 router.get('/', (req, res, next) => {
-  res.render('index', { 
-    title: 'Express',
-    /*date: currentDate*/
+  res.render('content/index', {
+    title: 'Home'
    });
 });
 
 /* GET about page. */
 router.get('/about', (req, res, next) => {
-  //res.render('index', { title: 'About' });
-   res.render('about', { 
-    title: 'About',
-    /*date: currentDate*/
+  res.render('content/about', {
+    title: 'About'
    });
 });
 
-/* GET project page. */
-router.get('/project', (req, res, next) => {
-  //res.render('index', { title: 'About' });
-   res.render('project', { 
-    title: 'Project',
-    /*date: currentDate*/
+/* GET products page. */
+router.get('/projects', (req, res, next) => {
+  res.render('content/projects', {
+    title: 'Projects'
    });
 });
 
-/* GET project page. */
+/* GET services page. */
 router.get('/services', (req, res, next) => {
-  //res.render('index', { title: 'About' });
-   res.render('services', { 
-    title: 'Services',
-    /*date: currentDate*/
+  res.render('content/services', {
+    title: 'Services'
    });
 });
 
-/* GET project page. */
-router.get('/contactme', (req, res, next) => {
-  //res.render('index', { title: 'About' });
-   res.render('contactme', { 
-    title: 'ContactMe',
-    /*date: currentDate*/
+/* GET contact page. */
+router.get('/contact', (req, res, next) => {
+  res.render('content/contact', {
+    title: 'Contact'
    });
 });
+
 module.exports = router;

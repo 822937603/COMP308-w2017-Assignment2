@@ -12,5 +12,26 @@ h1
   
 a 
   {
-  color: white;
+  color: #353131;
   }
+/* navbar */
+.navbar-default {
+    background-color: #154A8A;
+    border-color: #154A8A;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #154A8A;
+}
+.nav-pills
+{
+  background-color: dimgrey;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+        color: green;
+        background-color: #fcd900;
+    }
+.container
+{
+  background-color: dimgray;
+}
