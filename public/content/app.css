@@ -3,8 +3,14 @@ body
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif, white;
     background-color: black;
+    text-align: center;
   }
-
+  index-container
+  {
+    text-align: left;
+    width:800px;
+    margin: 0 auto;
+  }
 h1
   {
   color: white;
@@ -26,6 +32,8 @@ a
 .nav-pills
 {
   background-color: dimgrey;
+  align-self: center;
+  text-align:center;
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:focus {
         color: green;
@@ -34,4 +42,18 @@ a
 .container
 {
   background-color: dimgray;
+}
+carousel slide{
+    width: 80%; /* for example */
+    margin: auto;
+}
+
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img{
+width: 100%; /* use this, or not */
+margin: auto;
+}
+
+.nav-pills {
+    text-align:center;
 }
