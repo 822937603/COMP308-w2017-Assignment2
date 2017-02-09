@@ -53,6 +53,11 @@ carousel slide{
 width: 100%; /* use this, or not */
 margin: auto;
 }
+.carousel-inner {
+  width: auto;
+  height: 250px;
+  max-height: 250px;
+}
 
 .nav-pills {
     text-align:center;
