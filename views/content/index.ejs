@@ -1,11 +1,17 @@
+<!-- Name: Jonathan Lee #822937603
+     File Name: index.ejs
+     Website Name: http://comp308-assignment1.herokuapp.com/
+     Description: handles HTML for the homepage page
+-->
+
 <% include ../partials/header.ejs %>
 
     <!-- MAIN CONTENT -->
     <div class="index-container">
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
-          <!-- <h1><%= title %></h1>
-          <p>Welcome to <%= title %></p> -->
+
+          <!-- CAROUSEL -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -18,20 +24,19 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <a name=about href="/about"><img src="AboutMe.png"></a>
-      <!--<img src="AboutMe.png" alt="Chania">-->
+      <a name=about href="/about"><img src="assets/AboutMe.png"></a>
     </div>
 
     <div class="item">
-      <a name=project href="/project"><img src="MyProjects.png"></a>
+      <a name=project href="/project"><img src="assets/MyProjects.png"></a>
     </div>
 
     <div class="item">
-      <a name=project href="/services"><img src="Services.jpeg"></a>
+      <a name=project href="/services"><img src="assets/Services.jpeg"></a>
     </div>
 
     <div class="item">
-      <a name=project href="/contactme"><img src="ContactMe.jpg"></a>
+      <a name=project href="/contactme"><img src="assets/ContactMe.jpg"></a>
     </div>
   </div>
 
@@ -49,7 +54,6 @@
 </div>
         </div>
       
-
 <% include ../partials/footer.ejs %>
 
 

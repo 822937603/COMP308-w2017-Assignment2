@@ -1,3 +1,10 @@
+/*
+  Name: Jonathan Lee #822937603
+  File Name: index.js
+  Website Name: http://comp308-assignment1.herokuapp.com/
+  Description: index routing for the views
+*/
+
 let express = require('express');
 let router = express.Router();
 

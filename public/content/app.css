@@ -1,64 +1,88 @@
+/*
+  Name: Jonathan Lee #822937603
+  File Name: app.cs
+  Website Name: http://comp308-assignment1.herokuapp.com/
+  Description: css formatting for views
+*/
+
 body 
   {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif, white;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif, white;
     background-color: black;
     text-align: center;
   }
-  index-container
+
+index-container
   {
     text-align: left;
     width:800px;
     margin: 0 auto;
   }
+
 h1
   {
-  color: white;
+    color: white;
   }
   
 a 
   {
-  color: #353131;
+    color: #353131;
   }
-/* navbar */
-.navbar-default {
+
+/* Navbar */
+.navbar-default 
+  {
     background-color: #154A8A;
     border-color: #154A8A;
-}
-/* title */
-.navbar-default .navbar-brand {
+  }
+
+/* Navbar Title */
+.navbar-default .navbar-brand 
+  {
     color: #154A8A;
-}
+  }
+
 .nav-pills
-{
-  background-color: dimgrey;
-  align-self: center;
-  text-align:center;
-}
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
-        color: green;
-        background-color: #fcd900;
-    }
+  {
+    background-color: dimgrey;
+    align-self: center;
+    text-align:center;
+  }
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus 
+  {
+    color: green;
+    background-color: #fcd900;
+  }
+
 .container
-{
-  background-color: dimgray;
-}
-carousel slide{
-    width: 80%; /* for example */
+  {
+    background-color: dimgray;
+  }
+
+/* Carousel */
+carousel slide
+  {
+    width: 80%;
     margin: auto;
-}
+  }
 
 .carousel-inner > .item > img, 
-.carousel-inner > .item > a > img{
-width: 100%; /* use this, or not */
-margin: auto;
-}
-.carousel-inner {
-  width: auto;
-  height: 250px;
-  max-height: 250px;
-}
+.carousel-inner > .item > a > img
+  {
+    width: 100%;
+    margin: auto;
+  }
 
-.nav-pills {
+.carousel-inner
+  {
+    width: auto;
+    height: 250px;
+    max-height: 250px;
+  }
+
+.nav-pills
+  {
     text-align:center;
-}
+  }

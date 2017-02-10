@@ -1,20 +1,28 @@
+<!--
+  Name: Jonathan Lee #822937603
+  File Name: about.ejs
+  Website Name: http://comp308-assignment1.herokuapp.com/
+  Description: handles HTML for the about page
+-->
+
 <% include ../partials/header.ejs %>
 
     <!-- MAIN CONTENT -->
     <div class="container">
       <div class="row">
         <div class="col-md-offset-3 col-md-6">
-          <!--<h1><%= title %></h1>
-          <p>Welcome to <%= title %></p>-->
+
+          <!-- TAB AND PILLS - TAB NAVIGATION -->
           <ul class="nav nav-pills">
   <li class="active"><a data-toggle="pill" href="#life">Life</a></li>
   <li><a data-toggle="pill" href="#school">School</a></li>
   <li><a data-toggle="pill" href="#work">Work</a></li>
 </ul>
 
+          <!-- TAB CONTENT - LIFE -->
 <div class="tab-content">
   <div id="life" class="tab-pane fade in active">
-    <a name=Toronto href="http://www1.toronto.ca/"><img src="Toronto-Logo-jpeg.jpg"></a>
+    <a name=Toronto href="http://www1.toronto.ca/"><img src="assets/Toronto-Logo-jpeg.jpg"></a>
     <p></p>
     <p>
           My name is Jonathan Lee, born and raised in Toronto, Ontario Canada. I have always had a love of video games
@@ -22,8 +30,10 @@
           enjoy coding, enjoy creation and gameplay design.
     </p>
   </div>
+
+          <!-- TAB CONTENT - SCHOOL -->
   <div id="school" class="tab-pane fade">
-    <a name=CentennialCollege href="https://www.centennialcollege.ca/"><img src="CentennialCollege_Portfolio_1.jpg"></a>
+    <a name=CentennialCollege href="https://www.centennialcollege.ca/"><img src="assets/CentennialCollege_Portfolio_1.jpg"></a>
     <p></p>
     <p>I am a new graduate of Centennial College
       where I studied Software Engineering specializing in Interactive Gaming.
@@ -33,8 +43,10 @@
       as well as utilize agile methodologies during these projects.
     </p>
   </div>
+
+          <!-- TAB CONTENT - WORK -->
   <div id="work" class="tab-pane fade">
-    <a name=SmokeBomb href="http://smokebomb.ca/"><img src="Smokebomb.png"></a>
+    <a name=SmokeBomb href="http://smokebomb.ca/"><img src="assets/Smokebomb.png"></a>
     <p></p>
     <p>
       While pursuing my studies I had the opportunity to work with SmokeBomb Entertainment
