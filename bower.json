@@ -1,12 +1,12 @@
 {
-  "name": "comp308-assignment1",
+  "name": "comp308-assignment2",
   "description": "",
   "main": "server.js",
   "authors": [
     "Jonathan Lee"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/822937603/COMP308-w2017-Assignment1",
+  "homepage": "https://github.com/822937603/COMP308-w2017-Assignment2",
   "ignore": [
     "**/.*",
     "node_modules",

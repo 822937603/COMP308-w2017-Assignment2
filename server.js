@@ -4,8 +4,8 @@
  * Module dependencies.
  */
 
-let app = require('./app');
-let debug = require('debug')('COMP308-w2017-Assignment1:server');
+let app = require('./server/app');
+let debug = require('debug')('COMP308-w2017-Assignment2:server');
 let http = require('http');
 
 /**
