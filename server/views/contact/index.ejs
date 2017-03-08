@@ -4,41 +4,44 @@
     <div class="container">
       <div class="row">
         <div class="col-md-offset-1 col-md-10">
-          <h3>Favourite Books List </h3>
+          <h3>Contact List </h3>
             <!-- fixed the add button -->
-          <a href="/books/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a book</a>
+          <a href="/contacts/add" class="btn btn-primary"><i class="fa fa-plus"></i> Add a contact</a>
           <br>
           <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
               <thead>
                 <tr>
-                  <th>Title</th>
-                  <th class="text-center">Price</th>
-                  <th class="text-center">Author</th>
-                  <th class="text-center">Genre</th>
+                  <th>Name</th>
+                  <th class="text-center">Contact Number</th>
+                  <th class="text-center">Email</th>
+                  <th class="text-center"></th>
                   <th class="text-center"></th>
                   <th class="text-center"></th>
                 </tr>
                 </thead>
                 <tbody id="myTable">
-                <!-- Template Row -->
-                <% for (let count = 0; count < books.length; count++) { %>
+                <!-- Template Row 
+                Name: String,
+                ContactNumber: Number,
+                Email: String -->
+                <% for (let count = 0; count < contacts.length; count++) { %>
                 <tr>
-                  <td><%= books[count].Title %></td>
-                  <td class="text-center">$<%= books[count].Price %></td>
-                  <td class="text-center"><%= books[count].Author %></td>
-                  <td class="text-center"><%= books[count].Genre %></td>
+                  <td><%= contacts[count].Name %></td>
+                  <td class="text-center">$<%= contacts[count].ContactNumber %></td>
+                  <td class="text-center"><%= contacts[count].Email %></td>
+                  <!-- <td class="text-center"><%= contacts[count].Genre %></td> -->
 
                   <td class="text-center">
                     <!-- Fixed the edit button -->
-                    <a href="/books/<%= books[count]._id %>" class="btn btn-primary">
+                    <a href="/contacts/<%= contacts[count]._id %>" class="btn btn-primary">
               <i class="fa fa-pencil-square-o"></i> Edit</a>
 
                   </td>
 
                   <td class="text-center">
                     <!-- fixed the delete button -->
-                    <a href="/books/delete/<%= books[count]._id %>" class="btn btn-danger">
+                    <a href="/contacts/delete/<%= contacts[count]._id %>" class="btn btn-danger">
               <i class="fa fa-trash-o"></i> Delete</a>
 
                   </td>

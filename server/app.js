@@ -57,6 +57,19 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+//route redirects
+app.use('/', index);
+app.use('/contacts', contacts);
+
+//passport User configuration
+let UserModel = require('./model/users');
+let User = UserModel.User;
+
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// route redirects
 app.use('/', index);
 app.use('/contacts', contacts);
 

@@ -21,11 +21,22 @@ let contact = require('../model/contacts');
 let currentDate = new Date();
   currentDate = currentDate.toLocaleTimeString();
 
+  //function to check if user is authenticated
+function requireAuth(req, res, next)
+{
+  //check if the user is Logged index
+  if(!req.isAuthenticated())
+  {
+    return res.redirect('/login');
+  }
+  next();
+}
+
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
   res.render('content/index', {
     title: 'Home'
-    
+
    });
 });
 
@@ -116,7 +127,7 @@ router.post('/register', (req, res, next) => {
         }
         return res.render('auth/register', {
           title: 'Register',
-          gcontacts: '',
+          contacts: '',
           messages: req.flash('registerMessage'),
           displayName: req.user ? req.user.displayName : ''
         });

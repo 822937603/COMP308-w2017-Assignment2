@@ -31,7 +31,7 @@ router.get('/', requireAuth, (req, res, next) => {
       return console.error(err);
     }
     else {
-      res.render('contacts/index', {
+      res.render('contact/index', {
         title: 'Contacts',
         contacts: contacts
       });
@@ -42,7 +42,7 @@ router.get('/', requireAuth, (req, res, next) => {
 
 //  GET the Contact Details page in order to add a new Contact
 router.get('/add', requireAuth, (req, res, next) => {
-      res.render('contacts/details', {
+      res.render('contact/details', {
     title: "Add a new contact",
     contacts: ''
   });
@@ -84,7 +84,7 @@ router.get('/:id', requireAuth, (req, res, next) => {
         res.end(error);
       } else {
         // show the contact details view
-        res.render('contacts/details', {
+        res.render('contact/details', {
             title: 'Contacts Details',
             contacts: contact
         });
