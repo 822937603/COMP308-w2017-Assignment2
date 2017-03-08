@@ -31,6 +31,19 @@ router.get('/', requireAuth, (req, res, next) => {
       return console.error(err);
     }
     else {
+        //contact.sort((a,b) => {
+            contacts.sort((a,b) => {
+            var nameA = a.Name.toUpperCase();
+            var nameB = b.Name.toUpperCase();
+
+            if(nameA < nameB) {
+                return -1;
+            }
+            if (nameA > nameB) {
+          return 1;
+            }
+            return 0;
+        });
       res.render('contact/index', {
         title: 'Contacts',
         contacts: contacts
