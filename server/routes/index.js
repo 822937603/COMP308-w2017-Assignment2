@@ -1,7 +1,7 @@
 /*
   Name: Jonathan Lee #822937603
   File Name: index.js
-  Website Name: http://comp308-assignment1.herokuapp.com/
+  Website Name: https://comp308-assignment-2.herokuapp.com
   Description: index routing for the views
 */
 

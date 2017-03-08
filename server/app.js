@@ -69,10 +69,6 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// route redirects
-app.use('/', index);
-app.use('/contacts', contacts);
-
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   let err = new Error('Not Found');

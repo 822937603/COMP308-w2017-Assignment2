@@ -56,9 +56,9 @@ router.get('/', requireAuth, (req, res, next) => {
 //  GET the Contact Details page in order to add a new Contact
 router.get('/add', requireAuth, (req, res, next) => {
       res.render('contact/details', {
-    title: "Add a new contact",
-    contacts: ''
-  });
+            title: 'Contacts Details',
+            contacts: ''
+        });
 });
 
 // POST process the Contact Details page and create a new Contact - CREATE
