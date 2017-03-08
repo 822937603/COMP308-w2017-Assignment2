@@ -17,7 +17,7 @@
                   <th class="text-center">Email</th>
                   <th class="text-center"></th>
                   <th class="text-center"></th>
-                  <th class="text-center"></th>
+                  
                 </tr>
                 </thead>
                 <tbody id="myTable">
@@ -28,9 +28,8 @@
                 <% for (let count = 0; count < contacts.length; count++) { %>
                 <tr>
                   <td><%= contacts[count].Name %></td>
-                  <td class="text-center">$<%= contacts[count].ContactNumber %></td>
+                  <td class="text-center"><%= contacts[count].ContactNumber %></td>
                   <td class="text-center"><%= contacts[count].Email %></td>
-                  <!-- <td class="text-center"><%= contacts[count].Genre %></td> -->
 
                   <td class="text-center">
                     <!-- Fixed the edit button -->

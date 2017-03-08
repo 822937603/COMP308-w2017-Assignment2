@@ -35,9 +35,9 @@ router.get('/', requireAuth, (req, res, next) => {
         title: 'Contacts',
         contacts: contacts
       });
+      
     }
   });
-
 });
 
 //  GET the Contact Details page in order to add a new Contact
@@ -78,7 +78,7 @@ router.get('/:id', requireAuth, (req, res, next) => {
 
     let id = req.params.id;
 
-    contact.findById(id, (err, conatact) => {
+    contact.findById(id, (err, contact) => {
       if(err) {
         console.log(err);
         res.end(error);
@@ -110,7 +110,7 @@ router.post('/:id', requireAuth, (req, res, next) => {
         console.log(err);
         res.end(err);
       } else {
-        // refresh the book List
+        // refresh the contact List
         res.redirect('/contacts');
       }
     });
@@ -121,7 +121,7 @@ router.post('/:id', requireAuth, (req, res, next) => {
 router.get('/delete/:id', requireAuth, (req, res, next) => {
  let id = req.params.id;
 
-    book.remove({_id: id}, (err) => {
+    contact.remove({_id: id}, (err) => {
       if(err){
         console.log(err);
         res.end(err);

@@ -7,28 +7,22 @@
           <h1><%= title %></h1>
             <form class="form" method="post">
               <div class="form-group">
-                <label for="NameTextField">Title</label>
+                <label for="NameTextField">Name</label>
                 <input type="text" class="form-control" id="NameTextField"
-                placeholder="Book Name" name="title" value="<%= books.Title %>" required>
+                placeholder="Contact Name" name="Name" value="<%= contacts.Name %>" required>
               </div>
               <div class="form-group">
-                <label for="PriceTextField">Price</label>
-                <input type="text" class="form-control" id="PriceTextField"
-                placeholder="Book Price" name="price" value="<%= books.Price %>"  required>
+                <label for="ContactNumberTextField">Contact Number</label>
+                <input type="text" class="form-control" id="ContactNumberField"
+                placeholder="Contact Number" name="ContactNumber" value="<%= contacts.Number %>"  required>
               </div>
               <div class="form-group">
-                <label for="AuthorTextField">Author</label>
-                <input type="text" class="form-control" id="AuthorTextField"
-                placeholder="Book Author" name="author" value="<%= books.Author %>"  required>
+                <label for="EmailTextField">Email</label>
+                <input type="text" class="form-control" id="EmailTextField"
+                placeholder="Email" name="Email" value="<%= contacts.Email %>"  required>
               </div>
-              <div class="form-group">
-                <label for="GenreTextField">Genre</label>
-                <input type="text" class="form-control" id="GenreTextField"
-                placeholder="Book Genre" name="genre" value="<%= books.Genre %>"  required>
-              </div>
-
               <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
-              <a href="/books" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+              <a href="/contacts" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
             </form>
         </div>
       </div>
