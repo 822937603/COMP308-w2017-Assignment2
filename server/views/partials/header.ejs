@@ -63,7 +63,7 @@
           <li><a href="/contact"><i class="fa fa-id-badge fa-lg"></i> Contact</a></li>
         <% } %>
 
-        <% if(typeof displayName == 'string' && displayName) { %>
+        <% if(typeof username == 'string' && username) { %>
           <% if(title == "contacts") { %>
           <li class="active"><a href="/contacts"><i class="fa fa-book fa-lg">
           </i> Contacts List</a></li>
@@ -73,8 +73,8 @@
           <% } %>
           <% } %>
 
-          <% if(typeof displayName == 'string' && displayName) { %>
-          <li class="navbar-text"><i class="fa fa-user"></i> Welcome, <%= displayName %></li>
+          <% if(typeof username == 'string' && username) { %>
+          <li class="navbar-text"><i class="fa fa-user"></i> Welcome, <%= username %></li>
           <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout </a></li>
         <% } else {%>
           <li><a href="/login"><i class="fa fa-sign-in"></i> Login </a></li>

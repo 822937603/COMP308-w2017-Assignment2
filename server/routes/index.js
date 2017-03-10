@@ -35,36 +35,40 @@ function requireAuth(req, res, next)
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
   res.render('content/index', {
-    title: 'Home'
-
+    title: 'Home',
+    username: req.user ? req.user.username : ''
    });
 });
 
 /* GET about page. */
 router.get('/about', (req, res, next) => {
   res.render('content/about', {
-    title: 'About'
+    title: 'About',
+    username: req.user ? req.user.username : ''
    });
 });
 
 /* GET products page. */
 router.get('/projects', (req, res, next) => {
   res.render('content/projects', {
-    title: 'Projects'
+    title: 'Projects',
+    username: req.user ? req.user.username : ''
    });
 });
 
 /* GET services page. */
 router.get('/services', (req, res, next) => {
   res.render('content/services', {
-    title: 'Services'
+    title: 'Services',
+    username: req.user ? req.user.username : ''
    });
 });
 
 /* GET contact page. */
 router.get('/contact', (req, res, next) => {
   res.render('content/contact', {
-    title: 'Contact'
+    title: 'Contact',
+    username: req.user ? req.user.username : ''
    });
 });
 
@@ -77,7 +81,7 @@ router.get('/login', (req, res, next) => {
       title: 'Login',
       contacts: '',
       messages: req.flash('loginMessage'),
-      displayName: req.user ? req.user.displayName : ''
+      username: req.user ? req.user.username : ''
     });
   } else {
     return res.redirect('/contacts'); //redirect to the contacts list
@@ -102,7 +106,7 @@ router.get('/register', (req, res, next) => {
         title: 'Register',
       contacts: '',
       messages: req.flash('registerMessage'),
-      displayName: req.user ? req.user.displayName : ''
+      username: req.user ? req.user.username : ''
       })
     }
 });
@@ -114,7 +118,7 @@ router.post('/register', (req, res, next) => {
       username: req.body.username,
       password: req.body.password,
       email: req.body.email,
-      displayName: req.body.displayName,
+      Name: req.body.Name,
     }),
     req.body.password,
     (err) => {
@@ -129,7 +133,7 @@ router.post('/register', (req, res, next) => {
           title: 'Register',
           contacts: '',
           messages: req.flash('registerMessage'),
-          displayName: req.user ? req.user.displayName : ''
+          username: req.user ? req.user.username : ''
         });
 
       }

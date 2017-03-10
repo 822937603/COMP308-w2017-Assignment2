@@ -1,3 +1,9 @@
+/* Name: Jonathan Lee #822937603
+     File Name: businessContact.js
+     Website Name: https://comp308-assignment-2.herokuapp.com
+     Description: handles routing for the business contacts page
+*/
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();
@@ -46,7 +52,8 @@ router.get('/', requireAuth, (req, res, next) => {
         });
       res.render('contact/index', {
         title: 'Contacts',
-        contacts: contacts
+        contacts: contacts,
+        username: req.user ? req.user.username : ''
       });
       
     }
@@ -57,7 +64,8 @@ router.get('/', requireAuth, (req, res, next) => {
 router.get('/add', requireAuth, (req, res, next) => {
       res.render('contact/details', {
             title: 'Contacts Details',
-            contacts: ''
+            contacts: '',
+            username: req.user ? req.user.username : ''
         });
 });
 
@@ -99,7 +107,8 @@ router.get('/:id', requireAuth, (req, res, next) => {
         // show the contact details view
         res.render('contact/details', {
             title: 'Contacts Details',
-            contacts: contact
+            contacts: contact,
+            username: req.user ? req.user.username : ''
         });
       }
     });

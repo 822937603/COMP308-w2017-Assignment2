@@ -1,3 +1,9 @@
+/*   Name: Jonathan Lee #822937603
+     File Name: users.js
+     Website Name: https://comp308-assignment-2.herokuapp.com
+     Description: handles model for users login
+*/
+
 // require these modules for our user model
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema; //alias
